@@ -9,7 +9,6 @@
      margin-top: 41px;
      margin-left: auto;
      margin-right: auto;
-
  }
 
  body {
@@ -41,20 +40,44 @@
 
  img {
      /* avatar */
-
+     margin-bottom: 32px;
      width: 320px;
      height: 320px;
      border-radius: 50%;
      filter: drop-shadow(0px 5px 10px aqua)
  }
 
- h1 {
-     /* Guilherme Oliveira */
+ img {
+     animation: animate_shadow_img 15s ease-in-out infinite;
+ }
 
+ @keyframes animate_shadow_img {
+
+    0%,     100% {
+        filter: drop-shadow(0px 5px 10px aqua);
+    }
+
+    25% {
+        filter: drop-shadow(0px 5px 10px rgb(0, 110, 255));
+    }
+
+    50% {
+        filter: drop-shadow(0px 5px 10px rgb(98, 0, 255));
+    }
+
+    75% {
+        filter: drop-shadow(0px 5px 10px rgb(255, 0, 200));
+    }
+ }
+ 
+ h1 {
      color: #FFFFFF;
      text-shadow: 2px 2px 8px black;
-     margin-top: 32px;
+ }
 
+ h3 {
+     margin-top: 8px;
+     color: #FFFFFF;
  }
 
  @supports (-webkit-text-stroke: 1px black) {}
@@ -110,6 +133,8 @@
      background: rgb(0, 29, 36);
      background: linear-gradient(280deg, rgba(0, 29, 36, 1) 0%, rgba(9, 79, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
      color: white;
+
+     filter: drop-shadow(0px 5px 10px aqua)
  }
 
  footer {
@@ -120,31 +145,32 @@
 
 
  .formulario {
-
-     width: 300px;
+     /* Essa div separada */
+     width: 285px;
      text-align: center;
-     margin-top: 30px;
+     margin-top: 25px;
      margin-left: auto;
      margin-right: auto;
      margin-bottom: auto;
 
      background: rgb(0, 29, 36);
      background: linear-gradient(90deg, rgba(0, 29, 36, 1) 0%, rgba(9, 79, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
-     
-     padding: 10px;
+
+     padding: 15px;
      border-radius: 10px;
  }
 
- .h1_formulario {
+ .formulario {
 
-    color: #FFFFFF;
-     text-shadow: 2px 2px 8px black;
-     margin-top: 10px;
+     filter: drop-shadow(0px 5px 10px rgb(190, 50, 218))
  }
 
- h3 {
-     margin-top: 8px;
-     color: #FFFFFF;
+ .formulario:hover {
+     background: rgb(0, 29, 36);
+     background: linear-gradient(280deg, rgba(0, 29, 36, 1) 0%, rgba(9, 79, 121, 1) 40%, rgba(0, 212, 255, 1) 100%);
+     color: white;
+
+     filter: drop-shadow(0px 5px 10px aqua)
  }
 
  input {
